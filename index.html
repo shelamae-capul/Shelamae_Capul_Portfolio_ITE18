@@ -66,7 +66,8 @@
     <h2>About Me</h2>
    <h5>I am a Computer Science student<br> Canva Designs & Data Entry</h5>
 <p>I specialize in Canva designs, presentation making, and accurate data entry. With a balance of creativity and precision, I create visually appealing layouts and maintain organized, error-free records. Dedicated and adaptable, I aim to deliver quality results in every project.</p>
-    <a href="#" class="btn">Hire Me</a>
+     <button id="edit-btn" class="btn">Edit</button>
+<a href="#" class="btn">Hire Me</a>
   </div>
 </section>
 
@@ -631,6 +632,33 @@ toggleBtn.addEventListener('click', () => {
 </script>
 
 
+<script>
+const editBtn = document.getElementById("edit-btn");
+const aboutSubtitle = document.getElementById("about-subtitle");
+const aboutDesc = document.getElementById("about-desc");
+
+let isEditing = false;
+
+editBtn.addEventListener("click", () => {
+  if (!isEditing) {
+    // Enable editing
+    aboutSubtitle.contentEditable = "true";
+    aboutDesc.contentEditable = "true";
+    aboutSubtitle.style.border = "1px dashed #e9204f";
+    aboutDesc.style.border = "1px dashed #e9204f";
+    editBtn.textContent = "Save";
+    isEditing = true;
+  } else {
+    // Disable editing
+    aboutSubtitle.contentEditable = "false";
+    aboutDesc.contentEditable = "false";
+    aboutSubtitle.style.border = "none";
+    aboutDesc.style.border = "none";
+    editBtn.textContent = "Edit";
+    isEditing = false;
+  }
+});
+</script>
 
 
 </body>

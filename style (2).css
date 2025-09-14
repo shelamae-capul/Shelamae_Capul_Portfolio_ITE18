@@ -481,14 +481,3 @@ gap: 6rem;
   }
 }
 
-
-<script>
-const toggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
-
-toggleBtn.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
-  // Change icon based on mode
-  toggleBtn.textContent = body.classList.contains('light-mode') ? 'Light Mode 🌞' : 'Dark Mode 🌙';
-});
-</script>
